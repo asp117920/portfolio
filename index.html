@@ -3,108 +3,199 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Alex Johnson - Junior Developer Portfolio</title>
+    <style>
+        /* CSS styles */
+        :root {
+            --primary-color: #4a90e2;
+            --secondary-color: #50e3c2;
+            --accent-color: #f39c12;
+            --text-color: #333;
+            --background-color: #f4f4f4;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        nav {
+            background-color: var(--accent-color);
+            padding: 1rem;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 1rem;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        main {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        section {
+            margin-bottom: 2rem;
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 0.5rem;
+        }
+
+        .project {
+            margin-bottom: 1.5rem;
+        }
+
+        .project h3 {
+            color: var(--accent-color);
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .skill {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                padding: 1rem 0;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                margin: 0.5rem 0;
+            }
+        }
+    </style>
 </head>
 <body>
-    <!-- Hero Section -->
-    <section id="hero">
-        <div class="hero-content">
-            <h1>Hi, I'm John Doe</h1>
-            <p>A Junior Software Developer passionate about building web applications.</p>
-            <a href="#about" class="btn">Learn More</a>
-        </div>
-    </section>
+    <header>
+        <h1>Alex Johnson</h1>
+        <p>Junior Web and App Developer</p>
+    </header>
 
-    <!-- About Section -->
-    <section id="about">
-        <h2>About Me</h2>
-        <div class="about-content">
-            <p>
-                I'm a self-taught junior software developer with a focus on building responsive and user-friendly web applications. 
-                I specialize in front-end development but also enjoy working on full-stack projects. 
-                I'm always eager to learn new technologies and improve my skills.
-            </p>
-            <p>
-                When I'm not coding, I enjoy contributing to open-source projects, writing tech blogs, and exploring new tools and frameworks.
-            </p>
-        </div>
-    </section>
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-    <!-- Skills Section -->
-    <section id="skills">
-        <h2>My Skills</h2>
-        <div class="skills-container">
-            <div class="skill">
-                <i class="fab fa-html5"></i>
-                <p>HTML5</p>
-            </div>
-            <div class="skill">
-                <i class="fab fa-css3-alt"></i>
-                <p>CSS3</p>
-            </div>
-            <div class="skill">
-                <i class="fab fa-js"></i>
-                <p>JavaScript</p>
-            </div>
-            <div class="skill">
-                <i class="fab fa-react"></i>
-                <p>React</p>
-            </div>
-            <div class="skill">
-                <i class="fab fa-node"></i>
-                <p>Node.js</p>
-            </div>
-            <div class="skill">
-                <i class="fab fa-git"></i>
-                <p>Git</p>
-            </div>
-        </div>
-    </section>
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Hello! I'm Alex Johnson, a passionate junior developer specializing in web and app development. With a keen eye for design and a love for clean, efficient code, I create engaging digital experiences that make a difference.</p>
+        </section>
 
-    <!-- Projects Section -->
-    <section id="projects">
-        <h2>My Projects</h2>
-        <div class="projects-container">
-            <div class="project-card">
-                <img src="https://via.placeholder.com/300x200" alt="Project 1">
-                <h3>E-Commerce Website</h3>
-                <p>A fully functional e-commerce website built with React and Node.js.</p>
-                <a href="#" class="btn">View Project</a>
+        <section id="projects">
+            <h2>My Projects</h2>
+            <div class="project">
+                <h3>EcoTrack</h3>
+                <p>A mobile app that helps users track and reduce their carbon footprint through daily activities and challenges.</p>
             </div>
-            <div class="project-card">
-                <img src="https://via.placeholder.com/300x200" alt="Project 2">
-                <h3>Portfolio Website</h3>
-                <p>A responsive portfolio website built with HTML, CSS, and JavaScript.</p>
-                <a href="#" class="btn">View Project</a>
+            <div class="project">
+                <h3>BookWorm</h3>
+                <p>A web application for book lovers to discover, review, and share their favorite reads with a vibrant community.</p>
             </div>
-            <div class="project-card">
-                <img src="https://via.placeholder.com/300x200" alt="Project 3">
-                <h3>Task Manager App</h3>
-                <p>A task management application built with React and Firebase.</p>
-                <a href="#" class="btn">View Project</a>
+            <div class="project">
+                <h3>FitPal</h3>
+                <p>A fitness tracking website that provides personalized workout plans and nutrition advice based on user goals.</p>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2>Get In Touch</h2>
-        <div class="contact-content">
-            <p>If you'd like to collaborate or just say hi, feel free to reach out!</p>
-            <a href="mailto:johndoe@example.com" class="btn">Email Me</a>
-        </div>
-    </section>
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="skills">
+                <span class="skill">HTML5</span>
+                <span class="skill">CSS3</span>
+                <span class="skill">JavaScript</span>
+                <span class="skill">React</span>
+                <span class="skill">Node.js</span>
+                <span class="skill">Python</span>
+                <span class="skill">Git</span>
+                <span class="skill">Responsive Design</span>
+                <span class="skill">UI/UX Design</span>
+            </div>
+        </section>
 
-    <!-- Footer -->
+        <section id="contact">
+            <h2>Get in Touch</h2>
+            <p>I'm always open to new opportunities and collaborations. Feel free to reach out!</p>
+            <p>Email: alex.johnson@example.com</p>
+            <p>LinkedIn: linkedin.com/in/alexjohnson</p>
+            <p>GitHub: github.com/alexjohnson-dev</p>
+        </section>
+    </main>
+
     <footer>
-        <p>&copy; 2023 John Doe. All rights reserved.</p>
-        <div class="social-links">
-            <a href="https://github.com/johndoe" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://linkedin.com/in/johndoe" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="https://twitter.com/johndoe" target="_blank"><i class="fab fa-twitter"></i></a>
-        </div>
+        <p>&copy; 2025 Alex Johnson. All rights reserved.</p>
     </footer>
 </body>
 </html>
