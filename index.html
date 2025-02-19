@@ -3,358 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alex Thompson - Junior Developer</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            line-height: 1.6;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, #6366f1, #a855f7, #ec4899);
-            color: white;
-            padding: 100px 0;
-            text-align: center;
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .hero p {
-            font-size: 1.25rem;
-            margin-bottom: 2rem;
-        }
-
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-        }
-
-        .social-links a {
-            color: white;
-            text-decoration: none;
-            padding: 0.5rem;
-            transition: color 0.3s;
-        }
-
-        .social-links a:hover {
-            color: #fcd34d;
-        }
-
-        /* About Section */
-        .about {
-            background: white;
-            padding: 80px 0;
-        }
-
-        .about h2 {
-            text-align: center;
-            font-size: 2rem;
-            color: #1f2937;
-            margin-bottom: 2rem;
-        }
-
-        .about-content {
-            max-width: 800px;
-            margin: 0 auto;
-            color: #4b5563;
-        }
-
-        /* Skills Section */
-        .skills {
-            background: linear-gradient(to right, #a855f7, #ec4899);
-            color: white;
-            padding: 80px 0;
-        }
-
-        .skills h2 {
-            text-align: center;
-            font-size: 2rem;
-            margin-bottom: 3rem;
-        }
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .skill-card {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            padding: 2rem;
-            border-radius: 1rem;
-            text-align: center;
-        }
-
-        .skill-card h3 {
-            margin: 1rem 0;
-        }
-
-        /* Projects Section */
-        .projects {
-            background: white;
-            padding: 80px 0;
-        }
-
-        .projects h2 {
-            text-align: center;
-            font-size: 2rem;
-            color: #1f2937;
-            margin-bottom: 3rem;
-        }
-
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .project-card {
-            background: #f9fafb;
-            border-radius: 1rem;
-            overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s;
-        }
-
-        .project-card:hover {
-            transform: scale(1.02);
-        }
-
-        .project-card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-
-        .project-content {
-            padding: 1.5rem;
-        }
-
-        .project-content h3 {
-            color: #1f2937;
-            margin-bottom: 0.5rem;
-        }
-
-        .project-content p {
-            color: #4b5563;
-            margin-bottom: 1rem;
-        }
-
-        .tech-tags {
-            display: flex;
-            gap: 0.5rem;
-            flex-wrap: wrap;
-            margin-bottom: 1rem;
-        }
-
-        .tech-tag {
-            background: #f3e8ff;
-            color: #9333ea;
-            padding: 0.25rem 0.75rem;
-            border-radius: 9999px;
-            font-size: 0.875rem;
-        }
-
-        .project-link {
-            color: #9333ea;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.25rem;
-        }
-
-        .project-link:hover {
-            color: #7e22ce;
-        }
-
-        /* Contact Section */
-        .contact {
-            background: linear-gradient(135deg, #6366f1, #a855f7, #ec4899);
-            color: white;
-            padding: 80px 0;
-            text-align: center;
-        }
-
-        .contact h2 {
-            font-size: 2rem;
-            margin-bottom: 3rem;
-        }
-
-        .contact-card {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            max-width: 500px;
-            margin: 0 auto;
-            padding: 2rem;
-            border-radius: 1rem;
-        }
-
-        .contact-button {
-            display: inline-block;
-            background: white;
-            color: #9333ea;
-            text-decoration: none;
-            padding: 1rem 2rem;
-            border-radius: 0.5rem;
-            font-weight: 600;
-            margin-top: 1.5rem;
-            transition: background-color 0.3s;
-        }
-
-        .contact-button:hover {
-            background: #f9fafb;
-        }
-
-        /* Footer */
-        .footer {
-            background: #111827;
-            color: white;
-            padding: 2rem 0;
-            text-align: center;
-        }
-
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .skills-grid,
-            .projects-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .container {
-                padding: 0 1rem;
-            }
-        }
-    </style>
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <h1>Alex Thompson</h1>
-            <p>Junior Full-Stack Developer</p>
-            <div class="social-links">
-                <a href="#"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg></a>
-                <a href="#"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg></a>
-                <a href="#"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></a>
-            </div>
+    <section id="hero">
+        <div class="hero-content">
+            <h1>Hi, I'm John Doe</h1>
+            <p>A Junior Software Developer passionate about building web applications.</p>
+            <a href="#about" class="btn">Learn More</a>
         </div>
     </section>
 
     <!-- About Section -->
-    <section class="about">
-        <div class="container">
-            <h2>About Me</h2>
-            <div class="about-content">
-                <p>I'm a passionate junior developer specializing in web and mobile application development. With a strong foundation in modern technologies, I create elegant solutions that solve real-world problems.</p>
-                <p>Currently focused on freelance and solo projects, I bring creativity and technical expertise to every project I undertake.</p>
-            </div>
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <p>
+                I'm a self-taught junior software developer with a focus on building responsive and user-friendly web applications. 
+                I specialize in front-end development but also enjoy working on full-stack projects. 
+                I'm always eager to learn new technologies and improve my skills.
+            </p>
+            <p>
+                When I'm not coding, I enjoy contributing to open-source projects, writing tech blogs, and exploring new tools and frameworks.
+            </p>
         </div>
     </section>
 
     <!-- Skills Section -->
-    <section class="skills">
-        <div class="container">
-            <h2>Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg>
-                    <h3>Web Development</h3>
-                    <p>React, Node.js, TypeScript, HTML/CSS</p>
-                </div>
-                <div class="skill-card">
-                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg>
-                    <h3>Mobile Development</h3>
-                    <p>React Native, Flutter</p>
-                </div>
-                <div class="skill-card">
-                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-                    <h3>Backend</h3>
-                    <p>Express.js, MongoDB, PostgreSQL</p>
-                </div>
+    <section id="skills">
+        <h2>My Skills</h2>
+        <div class="skills-container">
+            <div class="skill">
+                <i class="fab fa-html5"></i>
+                <p>HTML5</p>
+            </div>
+            <div class="skill">
+                <i class="fab fa-css3-alt"></i>
+                <p>CSS3</p>
+            </div>
+            <div class="skill">
+                <i class="fab fa-js"></i>
+                <p>JavaScript</p>
+            </div>
+            <div class="skill">
+                <i class="fab fa-react"></i>
+                <p>React</p>
+            </div>
+            <div class="skill">
+                <i class="fab fa-node"></i>
+                <p>Node.js</p>
+            </div>
+            <div class="skill">
+                <i class="fab fa-git"></i>
+                <p>Git</p>
             </div>
         </div>
     </section>
 
     <!-- Projects Section -->
-    <section class="projects">
-        <div class="container">
-            <h2>Recent Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <img src="https://images.unsplash.com/photo-1661956602116-aa6865609028?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="E-commerce Platform">
-                    <div class="project-content">
-                        <h3>E-commerce Platform</h3>
-                        <p>A full-stack e-commerce solution with real-time inventory management.</p>
-                        <div class="tech-tags">
-                            <span class="tech-tag">React</span>
-                            <span class="tech-tag">Node.js</span>
-                            <span class="tech-tag">MongoDB</span>
-                        </div>
-                        <a href="#" class="project-link">
-                            View Project
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg>
-                        </a>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <img src="https://images.unsplash.com/photo-1674574124649-778f9afc0e9c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Fitness Tracking App">
-                    <div class="project-content">
-                        <h3>Fitness Tracking App</h3>
-                        <p>Mobile application for tracking workouts and nutrition with social features.</p>
-                        <div class="tech-tags">
-                            <span class="tech-tag">React Native</span>
-                            <span class="tech-tag">Firebase</span>
-                        </div>
-                        <a href="#" class="project-link">
-                            View Project
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg>
-                        </a>
-                    </div>
-                </div>
+    <section id="projects">
+        <h2>My Projects</h2>
+        <div class="projects-container">
+            <div class="project-card">
+                <img src="https://via.placeholder.com/300x200" alt="Project 1">
+                <h3>E-Commerce Website</h3>
+                <p>A fully functional e-commerce website built with React and Node.js.</p>
+                <a href="#" class="btn">View Project</a>
+            </div>
+            <div class="project-card">
+                <img src="https://via.placeholder.com/300x200" alt="Project 2">
+                <h3>Portfolio Website</h3>
+                <p>A responsive portfolio website built with HTML, CSS, and JavaScript.</p>
+                <a href="#" class="btn">View Project</a>
+            </div>
+            <div class="project-card">
+                <img src="https://via.placeholder.com/300x200" alt="Project 3">
+                <h3>Task Manager App</h3>
+                <p>A task management application built with React and Firebase.</p>
+                <a href="#" class="btn">View Project</a>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section class="contact">
-        <div class="container">
-            <h2>Get in Touch</h2>
-            <div class="contact-card">
-                <p>I'm always interested in hearing about new projects and opportunities.</p>
-                <a href="mailto:alex.thompson@example.com" class="contact-button">Send me an email</a>
-            </div>
+    <section id="contact">
+        <h2>Get In Touch</h2>
+        <div class="contact-content">
+            <p>If you'd like to collaborate or just say hi, feel free to reach out!</p>
+            <a href="mailto:johndoe@example.com" class="btn">Email Me</a>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>© 2024 Alex Thompson. All rights reserved.</p>
+    <footer>
+        <p>&copy; 2023 John Doe. All rights reserved.</p>
+        <div class="social-links">
+            <a href="https://github.com/johndoe" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/johndoe" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://twitter.com/johndoe" target="_blank"><i class="fab fa-twitter"></i></a>
         </div>
     </footer>
 </body>
