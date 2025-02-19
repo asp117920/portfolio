@@ -21,14 +21,15 @@ a {
 .btn {
     display: inline-block;
     padding: 0.75rem 1.5rem;
-    background-color: #007bff;
+    background-color: #ff6f61;
     color: white;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .btn:hover {
-    background-color: #0056b3;
+    background-color: #ff3b2f;
+    transform: translateY(-3px);
 }
 
 /* Hero Section */
@@ -40,16 +41,39 @@ a {
     text-align: center;
     background: linear-gradient(135deg, #6a11cb, #2575fc);
     color: white;
+    animation: gradientAnimation 10s infinite alternate;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background: linear-gradient(135deg, #6a11cb, #2575fc);
+    }
+    100% {
+        background: linear-gradient(135deg, #2575fc, #6a11cb);
+    }
 }
 
 .hero-content h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
+    animation: fadeIn 2s ease-in-out;
 }
 
 .hero-content p {
     font-size: 1.5rem;
     margin-bottom: 2rem;
+    animation: fadeIn 3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* About Section */
@@ -67,7 +91,7 @@ a {
 /* Skills Section */
 #skills {
     padding: 4rem 2rem;
-    background-color: #f4f4f4;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
     text-align: center;
 }
 
@@ -84,22 +108,24 @@ a {
     padding: 1.5rem;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .skill:hover {
     transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
 .skill i {
     font-size: 3rem;
     margin-bottom: 1rem;
+    color: #ff6f61;
 }
 
 /* Projects Section */
 #projects {
     padding: 4rem 2rem;
-    background-color: white;
+    background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
     text-align: center;
 }
 
@@ -112,16 +138,17 @@ a {
 }
 
 .project-card {
-    background-color: #f4f4f4;
+    background-color: white;
     padding: 1.5rem;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     max-width: 300px;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-card:hover {
     transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
 .project-card img {
@@ -131,12 +158,13 @@ a {
 
 .project-card h3 {
     margin: 1rem 0;
+    color: #333;
 }
 
 /* Contact Section */
 #contact {
     padding: 4rem 2rem;
-    background-color: #f4f4f4;
+    background: linear-gradient(135deg, #84fab0, #8fd3f4);
     text-align: center;
 }
 
@@ -160,5 +188,5 @@ footer {
 }
 
 .social-links a:hover {
-    color: #007bff;
+    color: #ff6f61;
 }
